@@ -28,7 +28,7 @@ for (let j = 1; j < numbers.length; j += 1) {
         maiorNumero = numbers[j];
     }
 }
-console.log("Maior valor: " + maiorNumero)
+console.log("Maior valor: " + maiorNumero);
 
 //valores ímpares
 let totalImpares = 0
@@ -38,3 +38,26 @@ for (let k = 0; k < numbers.length; k += 1) {
     }
 }
 console.log("Total de impares: " + totalImpares)
+
+//menor valor
+let menorNumero = numbers[0];
+for (let l = 1; l < numbers.length; l += 1) {
+    if (numbers[l] < menorNumero) {
+        menorNumero = numbers[l];
+    }
+}
+console.log("Menor valor: " + menorNumero);
+
+//1 a 25
+let array = [];
+for (let m = 1; m <= 25; m += 1) {
+    array.push(m)
+}
+console.log(array);
+
+//dividindo por 2
+let array2 = []
+for (let n = 0; n < array.length; n += 1) {
+    array2.push(array[n] / 2);
+}
+console.log(array2)
