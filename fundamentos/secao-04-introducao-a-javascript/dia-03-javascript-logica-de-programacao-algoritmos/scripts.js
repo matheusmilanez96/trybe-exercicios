@@ -33,3 +33,19 @@ for (let k = 0; k < array.length; k += 1) {
     }
 }
 console.log(array[indexMenor]);
+
+//maior número primo
+let maiorPrimo = 2;
+let ePrimo = true;
+for (let l = 2; l <= 50; l += 1) {
+    ePrimo = true;
+    for (let m = 2; m <= l; m += 1) {
+        if (l % m === 0 && l !== m) {
+            ePrimo = false;
+        }
+    }
+    if (ePrimo === true) {
+        maiorPrimo = l;
+    }
+}
+console.log(maiorPrimo);
