@@ -10,6 +10,16 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+const handleChangeTech = (event) => {
+  const techElement = document.querySelector('.tech');
+  techElement.classList.remove('tech');
+  event.target.classList.add('tech');
+  input.value = '';
+}
+
+firstLi.addEventListener('click', handleChangeTech);
+secondLi.addEventListener('click', handleChangeTech);
+thirdLi.addEventListener('click', handleChangeTech);
 
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
@@ -24,7 +34,7 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // Segue abaixo um exemplo do uso de event.target:
 
 
-const resetText = (event) => {
+function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = 'Opção reiniciada';
   // O event possui várias propriedades, porém a mais usada é o event.target,
