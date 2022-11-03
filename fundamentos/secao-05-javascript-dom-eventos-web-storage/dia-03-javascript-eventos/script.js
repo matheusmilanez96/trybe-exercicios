@@ -11,10 +11,11 @@ const createDaysOfTheWeek = () => {
     };
   }
   
-  createDaysOfTheWeek();
+createDaysOfTheWeek();
   
-  // Escreva seu código abaixo.
-  let decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+// Escreva seu código abaixo.
+//passo 1
+let decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
 const createDaysOfTheMonth = () => {
   let getDaysList = document.querySelector('#days');
@@ -46,3 +47,71 @@ const createDaysOfTheMonth = () => {
 }
 
 createDaysOfTheMonth();
+
+//passo 2
+const createHolidayButton = (buttonName) => {
+  let buttonContainer = document.querySelector('.buttons-container');
+  let newButton = document.createElement('button');
+  let newButtonID = 'btn-holiday';
+
+  newButton.innerHTML = buttonName;
+  newButton.id = newButtonID;
+  
+  buttonContainer.appendChild(newButton);
+}
+
+createHolidayButton('Feriados');
+
+//passo 3
+const mudarCorHoliday = () => {
+  let holidayButton = document.querySelector('#btn-holiday');
+  let holidays = document.querySelectorAll('.holiday');
+  let corDefault = 'rgb(238,238,238)';
+  let corNova = 'purple';
+
+  holidayButton.addEventListener('click', () => {
+    for (let i = 0; i < holidays.length; i += 1) {
+      if (holidays[i].style.backgroundColor === corNova) {
+        holidays[i].style.backgroundColor = corDefault;
+      } else {
+        holidays[i].style.backgroundColor = corNova;
+      }
+    }
+  });
+}
+
+mudarCorHoliday();
+
+//passo 4
+const createFridayButton = (buttonName) => {
+  let buttonContainer = document.querySelector('.buttons-container');
+  let newButton = document.createElement('button');
+  let newButtonID = 'btn-friday';
+
+  newButton.innerHTML = buttonName;
+  newButton.id = newButtonID;
+
+  buttonContainer.appendChild(newButton);
+}
+
+createFridayButton("Sexta-feira")
+
+//passo 5
+const mudarTextoFriday = (fridaysArray) => {
+  let fridayButton = document.querySelector('#btn-friday');
+  let fridays = document.querySelectorAll('.friday');
+  let newFridayText = "Sextou!!!"
+
+  fridayButton.addEventListener('click', () => {
+    for (let i = 0; i < fridays.length; i += 1) {
+      if (fridays[i].innerHTML !== newFridayText) {
+        fridays[i].innerHTML = newFridayText;
+      } else {
+        fridays[i].innerHTML = fridaysArray[i];
+      }
+    }
+  });
+}
+
+let decemberFridays = [ 4, 11, 18, 25 ];
+mudarTextoFriday(decemberFridays);
