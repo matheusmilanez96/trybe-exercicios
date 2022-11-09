@@ -104,6 +104,14 @@
         document.querySelector(".main-content").appendChild(h3);
       }
 
+      h1.className = "title";
+
+      document.querySelector(".right-content").nextSibling.className = "description";
+      document.querySelector(".description").nextSibling.className = "description";
+      document.querySelector(".description").nextSibling.nextSibling.className = "description";
+
+      let left = document.querySelector(".left-content");
+      document.querySelector(".main-content").removeChild(left)
     </script>
   </body>
 </html>
