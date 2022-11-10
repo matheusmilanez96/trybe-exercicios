@@ -9,6 +9,7 @@
 <body>
     <h1>Formulário de Cadastro</h1>
     <form action="" method="get" enctype="multipart/form-data">
+        <fieldset>
         <label for="nome">Nome completo:
             <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" maxlength="40" minlength="10">
         </label>
@@ -43,10 +44,11 @@
         <label for="checkbox2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.            
             <input type="checkbox" name="concordo-2" id="checkbox2">
         </label>
-        <br><br>
+        </fieldset>
+        <br>
         <button type="submit" id="submit-btn">Participar do concurso TrybeTrip</button>
-        <button type="button">Apagar informações</button>
+        <button type="button" id="clear-btn">Apagar informações</button>
     </form>
-    
+    <script src="./script.js"></script>
 </body>
 </html>
