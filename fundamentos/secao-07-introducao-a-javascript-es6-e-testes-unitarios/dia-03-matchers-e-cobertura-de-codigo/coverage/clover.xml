@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669167435894" clover="3.2.0">
-  <project timestamp="1669167435895" name="All files">
+<coverage generated="1669168130399" clover="3.2.0">
+  <project timestamp="1669168130400" name="All files">
     <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2" elements="15" coveredelements="15" complexity="0" loc="9" ncloc="9" packages="1" files="2" classes="2"/>
     <file name="printMessage.js" path="/home/matheus/Trybe/trybe-exercicios/fundamentos/secao-07-introducao-a-javascript-es6-e-testes-unitarios/dia-03-matchers-e-cobertura-de-codigo/printMessage.js">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="2" count="1" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
+      <line num="9" count="3" type="stmt"/>
       <line num="12" count="1" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
     </file>
