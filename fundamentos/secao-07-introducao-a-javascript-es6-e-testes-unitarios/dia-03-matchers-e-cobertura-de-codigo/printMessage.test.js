@@ -11,4 +11,7 @@ describe('a função printMessage', () => {
     expect(printMessage(info)).toMatch('Boas vindas,');
     expect(printMessage(info)).toMatch(info.personagem);
   });
+  it('testando o fluxo de exceção', () => {
+    expect(() => printMessage('Margarida')).toThrowError('objeto inválido');
+  })
 });
