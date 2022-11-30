@@ -66,3 +66,39 @@ const authorBornIn1947 = () => {
     return books.find((book) => book.author.birthYear === 1947).author.name;
 }
 console.log(authorBornIn1947());
+
+const smallerName = () => {
+    let nameBook;
+    // escreva aqui o seu código
+  
+    books.forEach((book) => {
+      if (!nameBook || book.name.length < nameBook.length) {
+        nameBook = book.name;
+      }
+    });
+    return nameBook;
+  }
+
+console.log(smallerName());
+
+const getNamedBook = () => {
+    return books.find((book) => book.name.length === 26);
+  }
+
+console.log(getNamedBook());
+
+const everyoneWasBornOnSecXX = () => {
+  return books.every((book) => (
+    book.author.birthYear >= 1901 && book.author.birthYear <= 2000
+  ));
+}
+
+console.log(everyoneWasBornOnSecXX());
+
+const expectedResult = true;
+
+const someBookWasReleaseOnThe80s = () => {
+  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
+}
+
+console.log(someBookWasReleaseOnThe80s());
