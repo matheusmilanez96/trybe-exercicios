@@ -61,11 +61,23 @@ const books = [
   },
 ];
   
-  // Adicione o código do exercício aqui:
-  const formatedBookNames = books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`);
+// Adicione o código do exercício aqui:
+const formatedBookNames = books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`);
 
-  console.log(formatedBookNames);
+console.log(formatedBookNames);
 
-  const formatedAuthorNamesBirth = books.map((book) => `${book.author.name} - ${book.author.birthYear}`);
+const formatedAuthorNamesBirth = books.map((book) => `${book.author.name} - ${book.author.birthYear}`);
 
-  console.log(formatedAuthorNamesBirth);
+console.log(formatedAuthorNamesBirth);
+
+const nameAndAge = books.map((book) => {
+  // escreva seu código aqui
+  const obj = {
+    author: book.author.name,
+    age: book.releaseYear - book.author.birthYear,
+  };
+  return obj;
+});
+const sortedArray = nameAndAge.sort((a, b) => a.age - b.age);
+
+console.log(sortedArray);
